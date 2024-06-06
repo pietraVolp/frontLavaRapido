@@ -1,37 +1,47 @@
 'use strict'
 
-import { getClientes } from "./clientes.js"
+import { getClientes } from "./funcoes.js"
 
 const button = document.getElementById('entrar')
 
-
 const validarLogin = async () => {
-    const email = document.getElementById('email').value
-    const password = document.getElementById('senha').value
+    
+    const email = document.getElementById('email').value.trim()
+    const password = document.getElementById('senha').value.trim()
 
-
-    if (email == '' || password == ''){
+    if (email === '' || password === ''){
         alert('Por Favor Preencha todos os Campos !!')
     } else {
+        try {
+            // Aguardar a resolução da promessa para obter os clientes
+            const clientes = await getClientes()
 
-        let validaUser = false
-        
+            // Log para depuração
+            console.log('Lista de clientes:', clientes);
+            console.log('Email digitado:', email);
+            console.log('Senha digitada:', password);
 
-        validaUser.forEach(user => {
-        
-            if(user.email == email && user.senha == password){
-                validaUser = true
+            // Verificar se o usuário existe na lista de clientes
+            const user = clientes.find(user => {
+                console.log('Verificando usuário:', user);
+                return user.email === email && user.senha === password
+           
+            })
+            if (user) {
+                // Se o usuário for encontrado, redirecionar para a página home
                 window.location.href = '../home.html'
+            } else {
+                alert('Por favor verifique o email e senha !!')
             }
-        });
-
-        if (!validaUser){
-            alert('Por favor verifique o email e senha !!')
+        } catch (error) {
+          console.log(error);
+            alert('Ocorreu um erro ao tentar fazer login. Por favor, tente novamente.')
         }
-
-        getClientes(validaUser)
     }
-    
 }
 
 button.addEventListener('click', validarLogin)
+
+
+
+
