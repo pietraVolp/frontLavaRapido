@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="./js/usuario.js" defer></script>
     <title>USUÁRIO</title>
 </head>
 <body class="
@@ -17,41 +18,55 @@ bg-zinc-800
     <div >
 
 
-        <a href="./home.html"><img src="./img/arrow-prev-svgrepo-com (1).svg" alt="" class="w-[20px] m-[15px]"></a>
+        <a href="./home.html"><img src="./img/arrow-prev-svgrepo-com (1).svg" alt="" class="w-[20px] m-[15px] mt-[30px]"></a>
         
-        <div class="bg-zinc-950 w-[340px] h-[280px] ml-[18px] mt-[20px] ">
+        <div class="bg-zinc-950 w-[340px] h-[100px] ml-[18px] mt-[50px]">
+            <h2 class="text-teal-500 text-xl text-bold p-2">Informações do Carro</h2>
+            
+                 <a href="./cadastroCarro.html">
+                  <button class="ml-[280px] mt-[-40px]">
+                      <div class="bg-teal-500 h-[35px] w-[35px] rounded-full">
+                          <h2 class="text-2xl text-gray-50">+</h2>
+                      </div>
+                  </button>
+                 </a> 
 
-            <div class="bg-zinc-300 w-[340px] h-[180px] mt-[20px] "></div>
-            <h2 class="text-lg text-bold text-teal-500 my-[10px] ml-[10px]">Carro: Nissan GTX-3B17</h2>
-            <h2 class="text-base text-teal-500 ml-[10px]">R$ 70</h2>
+
+            <div id="contanierCarro" class="space-x-6 text-gray-50 p-2 w-[380px] h-[100px] ml-[10px] mt-[-30px] ">
+            </div>
+            
         </div>
 
-            <div class="bg-zinc-950 w-[300px] h-[240px] pl-[15px] mt-[30px] ml-[40px]">
-                <div>
+            <div  class="bg-zinc-950 w-[300px] h-[350px] pl-[15px] mt-[60px] ml-[40px]">
+
+                <h2 class="text-teal-500 text-2xl ml-[25px]">Informações Usuário</h2>
+
+                <div class=" mt-[20px]" id="contanierUsuario">
+
                     <p class=" text-teal-500 text-bold text-base">Nome :</p>
-                    <p class="text-sm text-gray-50 ">Julia Mendes</p>
-
+                    
+    
+                    <p class=" mt-[20px] text-teal-500 text-bold text-base">Email :</p>
+              
+    
+                  
+                     <p class=" mt-[10px] text-teal-500 text-bold text-base">Telefone :</p>
+                     
+             
+    
+                    <div class="mt-[-12px]">
+    
+                        <p class=" mt-[30px] text-teal-500 text-bold text-base">Endereço :</p>
+                        <p class="text-sm text-gray-50 mt-[5px] ">Cep: 06604290</p>
+                        <p class="text-sm text-gray-50 mt-[10px] ">Cidade:</p>
+                        <p class="text-sm text-gray-50 mt-[10px] ">Estado:</p>
+                        <div class="ml-[130px] mt-[-60px]">
+                            <p class="text-sm text-gray-50 mt-[10px]">Bairro:</p>
+                            <p class="text-sm text-gray-50 mt-[10px]">Endereço:</p>
+                        </div>
+                    </div>    
                 </div>
-
-                <p class=" mt-[10px] text-teal-500 text-bold text-base">Email :</p>
-                <p class="text-sm text-gray-50 ">juliaMendes2897@gmail.com</p>
-
-                <div class="ml-[160px] mt-[-106px]">
-                    <p class=" mt-[10px]  text-teal-500 text-bold text-base">Telefone :</p>
-                    <p class="text-sm text-gray-50 ">(11) 98706-5746</p>
-                </div>
-
-                <div class="mt-[50px]">
-
-                    <p class=" mt-[30px] text-teal-500 text-bold text-base">Endereço :</p>
-                    <p class="text-sm text-gray-50 mt-[5px] ">Cep: 06604290</p>
-                    <p class="text-sm text-gray-50 mt-[10px] ">Cidade:</p>
-                    <p class="text-sm text-gray-50 mt-[10px] ">Estado:</p>
-                    <div class="ml-[130px] mt-[-60px]">
-                        <p class="text-sm text-gray-50 mt-[10px]">Bairro:</p>
-                        <p class="text-sm text-gray-50 mt-[10px]">Endereço:</p>
-                    </div>
-                </div>    
+                
             </div>
 
 
