@@ -1,6 +1,6 @@
 'use strict'
 
-import { getClientes } from "./funcoes.js"
+import { getClientes, getClientesId } from "./funcoes.js"
 
 const button = document.getElementById('entrar')
 
@@ -28,6 +28,7 @@ const validarLogin = async () => {
            
             })
             if (user) {
+                localStorage.setItem('idC', user.id_cliente)
                 // Se o usuário for encontrado, redirecionar para a página home
                 window.location.href = '../home.html'
             } else {

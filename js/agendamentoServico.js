@@ -59,6 +59,8 @@ async function fetchServico(servico) {
 
 
     
+
+    
     card.append(nome) 
     contanierServico.appendChild(card)
 
